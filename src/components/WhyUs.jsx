@@ -44,8 +44,8 @@ const WhyUs = () => {
 
                 {CardData.map((card) => (
 
-                    <div class="card" id={card}>
-                        <div class="card__body">
+                    <div class="card" id={card} data-aos="fade-up" data-aos-duration="2000">
+                        <div class="card__body" >
                             <div class="card__icon text-[40px]">
                                 {card.icon}
                             </div>
