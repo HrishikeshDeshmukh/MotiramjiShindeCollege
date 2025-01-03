@@ -32,7 +32,7 @@ const CoursesSection = () => {
         items: [
             'General Nursing and Midwifery (GNM)',
             'Auxiliary Nurse Midwifery (ANM)',
-            'Revised Auxiliary Nurse Midwifery (R.A.N.M.)',
+           
             
         ],
         eligibility: '12th pass with Any Stream',

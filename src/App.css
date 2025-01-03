@@ -6,6 +6,10 @@
     
 }
 
+.active{
+  color: rgb(9 40 97);
+}
+
 .embla {
     overflow: hidden;
   }
@@ -630,6 +634,128 @@ color: #fff;
 }
 
 
+/* From Uiverse.io by felipesntr */ 
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+ }
+ 
+ .text {
+ text-wrap:wrap;
+ width:2.5rem;
+ font-size:12px;
+ align-text:center;
+ font-weight:800;
+ display:flex;
+ color:gray;
+ 
+ }
+ 
+ .out-1 {
+  position: absolute;
+  width: 8em;
+  height: 8em;
+  border-radius: 100%;
+  border: 0.2em solid transparent;
+  border-top-color: rgb(43, 226, 83);
+  animation: rec 2s infinite;
+  transition: all ease-in-out 0.3s;
+ }
+ 
+ .out-2 {
+  position: absolute;
+  width: 8em;
+  height: 8em;
+  border-radius: 100%;
+  border: 0.2em solid transparent;
+  border-left-color: rgb(226, 223, 43);
+  animation: rec 2s infinite;
+  transition: all ease-in-out 0.3s;
+ }
+ 
+ .out-3 {
+  position: absolute;
+  width: 8em;
+  height: 8em;
+  border-radius: 100%;
+  border: 0.2em solid transparent;
+  border-bottom-color: rgb(51, 105, 252);
+  animation: rec 2s infinite;
+  transition: all ease-in-out 0.3s;
+ }
+ 
+ .in {
+  position: absolute;
+  border-radius: 100%;
+  border: 0.2em solid rgba(43, 226, 83, 0.11);
+  width: 4em;
+  height: 4em;
+  transition: all ease-in-out 0.3s;
+ }
+ 
+ @keyframes rec {
+  0% {
+   transform: rotate(360deg);
+  }
+ }
 
 
+
+
+.navigation-wrapper {
+  position: relative;
+}
+
+.dots {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.dot {
+  border: none;
+  width: 10px;
+  height: 10px;
+  background: #c5c5c5;
+  border-radius: 50%;
+  margin: 0 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dot:focus {
+  outline: none;
+}
+
+.dot.active {
+  background: #000;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  fill: #fff;
+  cursor: pointer;
+}
+
+.arrow--left {
+  left: 5px;
+  fill: #000;
+}
+
+.arrow--right {
+  left: auto;
+  right: 5px;
+  fill: #000;
+}
+
+.arrow--disabled {
+  fill: rgba(65, 52, 52, 0.115);
+}
   

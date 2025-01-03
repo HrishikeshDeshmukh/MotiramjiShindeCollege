@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../assets/logo-2.png'
+import { Link } from 'react-router-dom'
 
 
 
@@ -16,14 +17,14 @@ const Footer = () => {
                     <div className="footer-content-column">
                         <div className="footer-logo">
                             <a className="footer-logo-link" href="#">
-                                <img src={Logo} alt="logo"  />
-                                
+                                <img src={Logo} alt="logo" />
+
                             </a>
-                            
+
                         </div>
                         <div className="footer-menu">
                             <p className="address">Sant Barhanpure Nagar, Sewagram Road,<br />
-                            Mandgaon Tah. Samudrapur Dist.Wardha - 442102</p>
+                                Mandgaon Tah. Samudrapur Dist.Wardha - 442102</p>
 
                         </div>
                     </div>
@@ -45,32 +46,38 @@ const Footer = () => {
                                     <a href="https://rtmnuresults.org/" target='_blank'>Results Link</a>
                                 </li>
 
-                               
+
                             </ul>
                         </div>
-                       
+
                     </div>
                     <div className="footer-content-column">
                         <div className="footer-menu">
                             <h2 className="footer-menu-name"> Quick Links</h2>
                             <ul id="menu-quick-links" className="footer-menu-list">
-                                <li className="menu-item menu-item-type-custom menu-item-object-custom">
-                                    Home
-                                </li>
+                                <Link to='/'>
+                                    <li className="menu-item menu-item-type-custom menu-item-object-custom">
+                                        Home
+                                    </li>
+                                </Link>
+                                <Link to='/about'>
                                 <li className="menu-item menu-item-type-custom menu-item-object-custom">
                                     About
-                                </li>
+                                </li></Link>
+                                <Link to='/acedemics'>
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
                                     Courses
-                                </li>
+                                </li></Link>
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                                    <a href="https://udyamregistration.gov.in/Government-India/Ministry-MSME-registration.htm">Registration</a>
+                                    <a href="https://udyamregistration.gov.in/Government-India/Ministry-MSME-registration.htm">Take Admission</a>
                                 </li>
+                                <Link to='/gallery'>
                                 <li className="menu-item menu-item-type-post_type_archive menu-item-object-customer">
-                                    <a href="https://msme.gov.in/right-information-act">Photo Gallery</a></li>
+                                    Photo Gallery</li></Link>
+                                    <Link to='/contact'>
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page">
                                     Contact
-                                </li>
+                                </li></Link>
                             </ul>
                         </div>
                     </div>
@@ -91,7 +98,7 @@ const Footer = () => {
 
                 <div className="footer-end">
                     <p>Designed and Developed by ©HD Web Services</p>
-                    <p>All CopyRight Reserved</p>
+                    <p>All CopyRights Reserved</p>
                 </div>
 
             </footer >

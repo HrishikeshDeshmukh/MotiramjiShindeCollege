@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MdOutlineEmail } from "react-icons/md";
 import { FaPhoneAlt, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import Logo from "../assets/logo.png"
+import { NavLink, Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -34,8 +35,10 @@ const Navbar = () => {
       <nav className="bg-white w-full z-20  border-b border-gray-200">
         <div className="flex items-center justify-between p-4 max-sm:p-2 flex-col xl:flex-row">
           <div className='flex flex-row gap-2 items-center'>
-          <img src={Logo} alt=""  className="w-[400px] max-sm:w-[300px] max-[325px]:w-[250px]"/>
-          <button
+            <Link to='/'>
+              <img src={Logo} alt="" className="w-[400px] max-sm:w-[300px] max-[325px]:w-[250px]" />
+            </Link>
+            <button
               data-collapse-toggle="navbar-sticky"
               type="button"
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100"
@@ -60,9 +63,9 @@ const Navbar = () => {
                 />
               </svg>
             </button>
-            </div>
+          </div>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ">
-            
+
           </div>
           <div
             className={`items-center justify-between w-full md:flex md:w-auto  md:order-1 ${isMenuOpen ? "block" : "hidden"
@@ -70,55 +73,70 @@ const Navbar = () => {
             id="navbar-sticky"
           >
             <ul className="flex flex-col  p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-4 lg:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
-              <li className="block  py-2 px-3  text-black bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500">
+              <NavLink to='/' activeClassName="active">
+                <li className="block  py-2 px-3  hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-blue-700 rounded md:bg-transparent  md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer">
                   Home
-              </li>
-              <li
-                  className="block py-2 px-3 max-md:px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                </li>
+
+              </NavLink>
+
+              <NavLink to='/about' activeClassName="active">
+                <li
+                  className="block py-2 px-3 max-md:px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
                 >
                   About
-                
-              </li>
-              <li
-                  className="block py-2 px-3 max-md:px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+
+                </li>
+              </NavLink>
+
+              <NavLink to='/acedemics' activeClassName="active">
+                <li
+                  className="block py-2 px-3 max-md:px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
                 >
                   Academics
-               
-              </li>
-              <li
-                  className="block py-2 px-3 max-md:px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+
+                </li>
+              </NavLink>
+              <NavLink to='/departments' >
+                <li
+                  className="block py-2 px-3 max-md:px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
                 >
                   Department
-               
-              </li>
-              <li
-                
-                  className="block py-2 px-3 max-md:px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+
+                </li>
+              </NavLink>
+
+              <NavLink to='/administration' >
+                <li
+
+                  className="block py-2 px-3 max-md:px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
                 >
                   Administration
-                
-              </li>
-              <li
-                  className="block py-2 px-3 max-md:px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+
+                </li></NavLink>
+              <NavLink to="/activity">
+                <li
+                  className="block py-2 px-3 max-md:px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
                 >
                   Activity
-              
-              </li>
 
-              <li
-                  className="block py-2 px-3 max-md:px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                </li></NavLink>
+              <NavLink to='/gallery'>
+                <li
+                  className="block py-2 px-3 max-md:px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
                 >
                   Gallery
-               
-              </li>
 
-
-              <li
-                  className="block py-2 px-3 max-md:px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                </li>
+              </NavLink>
+              <NavLink to='/contact'>
+                <li
+                  className="block py-2 px-3 max-md:px-2 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer"
                 >
                   Contact Us
-               
-              </li>
+
+                </li>
+              </NavLink>
             </ul>
           </div>
         </div>
